@@ -25,9 +25,6 @@ public class AddEmployeeActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btn_add);
 
 
-
-
-
         dbHelper = new DBHelper(this);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

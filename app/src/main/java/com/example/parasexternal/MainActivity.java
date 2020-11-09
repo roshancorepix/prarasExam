@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.update:
+                startActivity(new Intent(MainActivity.this,UpdateEmployee.class));
                 break;
 
             case R.id.delete:
+                startActivity(new Intent(MainActivity.this,DeleteEmployeeActivity.class));
                 break;
 
             case R.id.view:
