@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ViewListEmployeeActivity extends AppCompatActivity {
 
@@ -14,6 +16,8 @@ public class ViewListEmployeeActivity extends AppCompatActivity {
     private EmployeeAdapter adapter;
     private DBHelper dbHelper;
     private ArrayList<Employee> list= new ArrayList<>();
+    private List<Employee> empList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +26,8 @@ public class ViewListEmployeeActivity extends AppCompatActivity {
         rv = findViewById(R.id.rv);
 
         dbHelper = new DBHelper(this);
-
         list = dbHelper.getAllCotacts();
+        Log.e("GG","Name: "+list.get(0).getEmpName());
 
 
         rv.setHasFixedSize(true);

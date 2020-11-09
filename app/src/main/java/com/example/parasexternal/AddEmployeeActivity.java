@@ -3,6 +3,7 @@ package com.example.parasexternal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,14 +24,18 @@ public class AddEmployeeActivity extends AppCompatActivity {
         et_salary = findViewById(R.id.et_salary);
         btnAdd = findViewById(R.id.btn_add);
 
-        name = et_name.getText().toString();
-        salary = et_salary.getText().toString();
+
+
+
 
         dbHelper = new DBHelper(this);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                name = et_name.getText().toString();
+                salary = et_salary.getText().toString();
+                Log.e("FF","name: "+name+" sala: "+salary);
                 addEmployee(name,salary);
             }
         });

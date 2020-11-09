@@ -27,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
         db.execSQL(
-                "create table Employee " +
+                "create table "+ CONTACTS_TABLE_NAME +
                         "(id integer primary key, name text,salary text)"
         );
     }
@@ -84,7 +84,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //hp = new HashMap();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from Employee", null );
+        Cursor res =  db.rawQuery( "select * from "+ CONTACTS_TABLE_NAME, null );
         res.moveToFirst();
 
         while(res.isAfterLast() == false){
