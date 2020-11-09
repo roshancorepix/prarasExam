@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ParasExternal</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="delete_employee">Delete Employee</string>
+    <string name="update_employee">Update Employee</string>
+    <string name="view">View</string>
+</resources>
